@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Itens</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	
+	<body>
+		<div id="header">
+			<div id="branding">
+				<img src="images/logo.png" ></img>
+			</div> <!-- end of branding -->
+			<div id="navigation">
+				<ul>
+					<li><a href="home.html">Home</a></li>
+					<li><a href="aboutus.html">About Us</a></li>
+					<li><a href="products.html">Products</a></li>
+					<li><a href="order.html">Order</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</div> <!-- end of navigation -->
+		</div> <!-- end of header -->
+		
+		<div id="tagline">
+		</div> <!-- end of tagline -->
+		
+		<div id="bodycontent">
+		</div>
+		
+		<script type="text/javascript">
+			var male_items = [{
+				name: 'ms1-1.jpg',
+				image: 'images/ms1-1.jpg'
+			}];
+			
+			var root = document.getElementById('bodycontent');
+			var fragment = document.createDocumentFragment();
+			
+			for (var i = 0; i < male_items.length; i++) {
+				var item = document.createElement('div');
+				item.setAttribute('id', male_items[i].name);
+				item.setAttribute('class', 'gallery');
+				
+				var img = document.createElement('img');
+				img.setAttribute('src', male_items[i].image);
+				item.appendChild(img);
+				var description = document.createElement('div');
+				description.setAttribute('class', 'description');
+				item.appendChild(description);
+				
+				fragment.appendChild(item);
+			}
+			
+			root.appendChild(fragment);
+		</script>
+	</body>
+</html>

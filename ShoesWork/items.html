@@ -28,67 +28,86 @@
 		</div>
 		
 		<script type="text/javascript">
+		
 		var products = [
-   		    {'id': 'fs1', 'img': 'images/fs1.jpg'},
-   		    {'id': 'fs2', 'img': 'images/fs2.jpg'},
-   		    {'id': 'fs3', 'img': 'images/fs3.jpg'},
-   		    {'id': 'fs4', 'img': 'images/fs4.jpg'},
-   		    {'id': 'fs5-1', 'img': 'images/fs5-1.jpg'},
-   		    {'id': 'fs5-2', 'img': 'images/fs5-2.jpg'},
-   		    {'id': 'fs6', 'img': 'images/fs6.jpg'},
-   		    {'id': 'fs7', 'img': 'images/fs7.jpg'},
-   		    {'id': 'fs8', 'img': 'images/fs8.jpg'},
-   		    {'id': 'fs9', 'img': 'images/fs9.jpg'},
-   		    {'id': 'fs10', 'img': 'images/fs10.jpg'},
-   		    {'id': 'fs11', 'img': 'images/fs11.jpg'},
-   		    {'id': 'fs12-1', 'img': 'images/fs12-1.jpg'},
-   		    {'id': 'fs12-2', 'img': 'images/fs12-2.jpg'},
-   		    {'id': 'fs13-2', 'img': 'images/fs13-2.jpg'},
-   		    {'id': 'fs13-3', 'img': 'images/fs13-3.jpg'},
-   		    {'id': 'fs14-1', 'img': 'images/fs14-1.jpg'},
-   		    {'id': 'fs15', 'img': 'images/fs15.jpg'},
-   		    {'id': 'fs16', 'img': 'images/fs16.jpg'},
-   		    {'id': 'fs17', 'img': 'images/fs17.jpg'},
-   		    {'id': 'fs18', 'img': 'images/fs18.jpg'},
-   		    {'id': 'fs19', 'img': 'images/fs19.jpg'},
-   		    {'id': 'fs20-2', 'img': 'images/fs20-2.jpg'},
-   		    {'id': 'fs21', 'img': 'images/fs21.jpg'},
-   		    {'id': 'ms1-1', 'img': 'images/ms1-1.jpg'},
-   		    {'id': 'ms1-4', 'img': 'images/ms1-4.jpg'},
-   		    {'id': 'ms2-1', 'img': 'images/ms2-1.jpg'},
-   		    {'id': 'ms3-1', 'img': 'images/ms3-1.jpg'},
-   		    {'id': 'ms3-2', 'img': 'images/ms3-2.jpg'},
-   		    {'id': 'ms4-1', 'img': 'images/ms4-1.jpg'},
-   		    {'id': 'ms4-2', 'img': 'images/ms4-2.jpg'},
-   		    {'id': 'ms5', 'img': 'images/ms5.jpg'},
-   		    {'id': 'ms6', 'img': 'images/ms6.jpg'},
-   		    {'id': 'ms7', 'img': 'images/ms7.jpg'},
-   		    {'id': 'ms8', 'img': 'images/ms8.jpeg'},
-   		    {'id': 'ms9', 'img': 'images/ms9.jpg'},
-   		    {'id': 'ms10', 'img': 'images/ms10.jpg'},
-   		    {'id': 'ms11', 'img': 'images/ms11.jpg'},
-   		    {'id': 'ms12', 'img': 'images/ms12.jpg'},
-   		    {'id': 'ms13', 'img': 'images/ms13.jpg'},
-   		    {'id': 'ms14', 'img': 'images/ms14.jpg'},
-   		    {'id': 'ms15', 'img': 'images/ms15.jpg'},
-   		    {'id': 'ms16', 'img': 'images/ms16.jpg'},
-   		    {'id': 'ms17', 'img': 'images/ms17.jpg'}
+   		    {'id': 'fs1', 'img': 'images/fs1.jpg', 'checked': false},
+   		    {'id': 'fs2', 'img': 'images/fs2.jpg', 'checked': false},
+   		    {'id': 'fs3', 'img': 'images/fs3.jpg', 'checked': false},
+   		    {'id': 'fs4', 'img': 'images/fs4.jpg', 'checked': false},
+   		    {'id': 'fs5-1', 'img': 'images/fs5-1.jpg', 'checked': false},
+   		    {'id': 'fs5-2', 'img': 'images/fs5-2.jpg', 'checked': false},
+   		    {'id': 'fs6', 'img': 'images/fs6.jpg', 'checked': false},
+   		    {'id': 'fs7', 'img': 'images/fs7.jpg', 'checked': false},
+   		    {'id': 'fs8', 'img': 'images/fs8.jpg', 'checked': false},
+   		    {'id': 'fs9', 'img': 'images/fs9.jpg', 'checked': false},
+   		    {'id': 'fs10', 'img': 'images/fs10.jpg', 'checked': false},
+   		    {'id': 'fs11', 'img': 'images/fs11.jpg', 'checked': false},
+   		    {'id': 'fs12-1', 'img': 'images/fs12-1.jpg', 'checked': false},
+   		    {'id': 'fs12-2', 'img': 'images/fs12-2.jpg', 'checked': false},
+   		    {'id': 'fs13-2', 'img': 'images/fs13-2.jpg', 'checked': false},
+   		    {'id': 'fs13-3', 'img': 'images/fs13-3.jpg', 'checked': false},
+   		    {'id': 'fs14-1', 'img': 'images/fs14-1.jpg', 'checked': false},
+   		    {'id': 'fs15', 'img': 'images/fs15.jpg', 'checked': false},
+   		    {'id': 'fs16', 'img': 'images/fs16.jpg', 'checked': false},
+   		    {'id': 'fs17', 'img': 'images/fs17.jpg', 'checked': false},
+   		    {'id': 'fs18', 'img': 'images/fs18.jpg', 'checked': false},
+   		    {'id': 'fs19', 'img': 'images/fs19.jpg', 'checked': false},
+   		    {'id': 'fs20-2', 'img': 'images/fs20-2.jpg', 'checked': false},
+   		    {'id': 'fs21', 'img': 'images/fs21.jpg', 'checked': false},
+   		    {'id': 'ms1-1', 'img': 'images/ms1-1.jpg', 'checked': false},
+   		    {'id': 'ms1-4', 'img': 'images/ms1-4.jpg', 'checked': false},
+   		    {'id': 'ms2-1', 'img': 'images/ms2-1.jpg', 'checked': false},
+   		    {'id': 'ms3-1', 'img': 'images/ms3-1.jpg', 'checked': false},
+   		    {'id': 'ms3-2', 'img': 'images/ms3-2.jpg', 'checked': false},
+   		    {'id': 'ms4-1', 'img': 'images/ms4-1.jpg', 'checked': false},
+   		    {'id': 'ms4-2', 'img': 'images/ms4-2.jpg', 'checked': false},
+   		    {'id': 'ms5', 'img': 'images/ms5.jpg', 'checked': false},
+   		    {'id': 'ms6', 'img': 'images/ms6.jpg', 'checked': false},
+   		    {'id': 'ms7', 'img': 'images/ms7.jpg', 'checked': false},
+   		    {'id': 'ms8', 'img': 'images/ms8.jpeg', 'checked': false},
+   		    {'id': 'ms9', 'img': 'images/ms9.jpg', 'checked': false},
+   		    {'id': 'ms10', 'img': 'images/ms10.jpg', 'checked': false},
+   		    {'id': 'ms11', 'img': 'images/ms11.jpg', 'checked': false},
+   		    {'id': 'ms12', 'img': 'images/ms12.jpg', 'checked': false},
+   		    {'id': 'ms13', 'img': 'images/ms13.jpg', 'checked': false},
+   		    {'id': 'ms14', 'img': 'images/ms14.jpg', 'checked': false},
+   		    {'id': 'ms15', 'img': 'images/ms15.jpg', 'checked': false},
+   		    {'id': 'ms16', 'img': 'images/ms16.jpg', 'checked': false},
+   		    {'id': 'ms17', 'img': 'images/ms17.jpg', 'checked': false}
    		];
-
+		
+		function handle(cb) {
+			for (var i = 0; i < products.length; i++) {
+				if (products[i].id == cb.id) {
+					products[i].checked = document.getElementById(cb.id).checked;
+					break;
+				}
+			}
+		};
+		
 			var root = document.getElementById('bodycontent');
 			var fragment = document.createDocumentFragment();
 
 			for (var i = 0; i < products.length; i++) {
 				var item = document.createElement('div');
-				item.setAttribute('id', products[i].id);
+// 				item.setAttribute('id', products[i].id);
 				item.setAttribute('class', 'gallery');
 
+				
 				var img = document.createElement('img');
 				img.setAttribute('src', products[i].img);
 				item.appendChild(img);
+				
 				var description = document.createElement('div');
 				description.setAttribute('class', 'description');
 				item.appendChild(description);
+				
+				var checkbox = document.createElement('input');
+				checkbox.setAttribute('id', products[i].id);
+				checkbox.setAttribute('type', 'checkbox');
+				checkbox.setAttribute('onclick', 'handle(this);');
+// 				checkbox.setAttribute('checked', products[i].checked);
+				item.appendChild(checkbox);
 
 				fragment.appendChild(item);
 			}

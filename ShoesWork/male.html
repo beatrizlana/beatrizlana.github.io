@@ -7,24 +7,36 @@
 	
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	
-	<script type="text/javascript">
+	<script>
 	
 		function buy()
 		{
-		var items = document.getElementByName("prod");
-		var basket = [];
+			var items = document.male.getElementByName("prod");
+			var basket = [];
 		
-		for(var i=0; i<items.length; i++)
-		{
-			if(items[i].checked == true)
+			for(var i=0; i<items.length; i++)
 			{
-				basket.push(items[i]);
-				document.write(items[i]);
+				if(items[i].checked == true)
+				{
+					basket.push(items[i]);
+					document.write(items[i]);
+				}
 			}
-		}
 
-		alert(basket.toString());
+			console.log(basket.toString());
 		
+			for(var i=0; i<basket.length; i++)
+			{
+				levarcod(basket[i], "sfs");
+			}
+		
+		}
+		
+		function levarcod(cod, descr)
+		{
+			top.opener.document.getElementById("campo1").value = cod;
+			top.opener.document.getElementById("descrp").innerHTML = descr;
+			window.close();
 		}
 	</script>
 </head>
@@ -51,9 +63,9 @@
 	</div> <!-- end of tagline -->
 	
 	<div id="bodycontent">
-		<form onsubmit="return buy()">
+		<form id="male" class="male" onsubmit="return buy()">
 		<div class="gallery">
-			<img src="images/ms1-1.jpg">
+			<a href="javascript:buy();"><img src="images/ms1-1.jpg"></a>
 			<div class="description">&euro;49.90</div>
 			<input type="checkbox" name="prod" value="ms1-1"> Add to basket
 		</div>

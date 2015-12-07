@@ -25,7 +25,7 @@
 		</div> <!-- end of tagline -->
 		
 		<div id="bodycontent">
-		</div>
+		
 		
 		<script type="text/javascript">
 		
@@ -113,6 +113,22 @@
 			}
 
 			root.appendChild(fragment);
+			
+			function buy()
+			{
+				var basket = [];
+			
+				for(var i=0; i<products.length; i++)
+				{
+					if(products[i].checked)
+					{
+						basket.push(products[i]);
+					}
+				}
+			}
 		</script>
+		<br><br><br><br>
+		<input onclick="javascript:buy()" type="button" id="buy" value="Buy">
+		</div>
 	</body>
 </html>

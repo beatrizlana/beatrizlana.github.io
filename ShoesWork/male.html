@@ -6,6 +6,27 @@
 	<title>Products</title>
 	
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	
+	<script type="text/javascript">
+	
+		function buy()
+		{
+		var items = document.getElementByName("prod");
+		var basket = [];
+		
+		for(var i=0; i<items.length; i++)
+		{
+			if(items[i].checked == true)
+			{
+				basket.push(items[i]);
+				document.write(items[i]);
+			}
+		}
+
+		alert(basket.toString());
+		
+		}
+	</script>
 </head>
 
 <body>
@@ -20,7 +41,7 @@
 				<li><a href="aboutus.html">About Us</a></li>
 				<li><a href="products.html">Products</a></li>
 				<li><a href="order.html">Order</a></li>
-				<li><a href="contact.html">Contact Us</a></p></li>
+				<li><a href="contact.html">Contact Us</a></li>
 			</ul>
 		</div> <!-- end of navigation -->
 	</div> <!-- end of header -->
@@ -30,25 +51,31 @@
 	</div> <!-- end of tagline -->
 	
 	<div id="bodycontent">
+		<form onsubmit="return buy()">
 		<div class="gallery">
 			<img src="images/ms1-1.jpg">
-			<div class="description"></div>
+			<div class="description">&euro;49.90</div>
+			<input type="checkbox" name="prod" value="ms1-1"> Add to basket
 		</div>
 		<div class="gallery">
 			<img src="images/ms2-1.jpg">
-			<div class="description"></div>
+			<div class="description">&euro;49.90</div>
+			<input type="checkbox" name="prod" value="ms2-1"> Add to basket
 		</div>
 		<div class="gallery">
 			<img src="images/ms3-1.jpg">
-			<div class="description"></div>
+			<div class="description">&euro;49.90</div>
+			<input type="checkbox" name="prod" value="ms3-1"> Add to basket
 		</div>
 		<div class="gallery">
 			<img src="images/ms4-1.jpg">
-			<div class="description"></div>
+			<div class="description">&euro;49.90</div>
+			<input type="checkbox" name="prod" value="ms4-1"> Add to basket
 		</div>
 		<div class="gallery">
 			<img src="images/ms5.jpg">
-			<div class="description"></div>
+			<div class="description">&euro;49.90</div>
+			<input type="checkbox" name="prod" value="ms5"> Add to basket
 		</div>
 		<div class="gallery">
 			<img src="images/ms6.jpg">
@@ -98,6 +125,9 @@
 			<img src="images/ms17.jpg">
 			<div class="description"></div>
 		</div>
+		
+		<input type="submit" value="Submit">
+		</form>
 		
 	</div> <!-- end of body content -->
 	

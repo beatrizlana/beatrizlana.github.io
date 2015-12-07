@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Order</title>
+	
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+	<div id="header">
+		<div id="branding">
+			<img src="images/logo.png" ></img>
+		</div> <!-- end of branding -->
+
+		<div id="navigation">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="products.html">Products</a></li>
+				<li><a href="order.html">Order</a></li>
+				<li><a href="contact.html">Contact Us</a></p></li>
+			</ul>
+		</div> <!-- end of navigation -->
+	</div> <!-- end of header -->
+	
+	<div id="tagline">
+			
+	</div> <!-- end of tagline -->
+		
+	<div id="bodycontent">
+		<form action="http://www.htmlcodetutorial.com/cgi-bin/mycgi.pl" method="post" class="order" id="order" onsubmit="return validate()">
+			<fieldset>
+				<label for="product">Product:</label>
+				<select multiple>
+					<option value="fsneakers">Female Sneakers</option>
+					<option value="msneakers">Male Sneakers</option>
+				</select>
+				<br>
+				<label for="name">Name:</label>
+				<input type="text" name="name" id="name"><br>
+				<label for="email">Email:</label>
+				<input type="text" name="email" id="email"><br>
+				<label for="phone">Phone Number:</label>
+				<input type="text" name="phone" id="phone"><br>
+				<label for="subject">Subject:</label>
+				<input type="text" name="subject" id="subject"><br>
+				<br> Message:<br>
+				<textarea name="message" id="message" cols="40" rows="10">Enter message here...</textarea>
+				<br><br><input type="submit" value="Submit">
+			</fieldset>
+		</form>
+	</div> <!-- end of body content -->
+	
+</body>
+</html>

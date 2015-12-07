@@ -1,0 +1,142 @@
+html, body{
+	background-color: #EDEAE1;
+	height: 100%;
+	margin: 1px;
+}
+
+#bodycontent{
+	float: left;
+	margin-left: 140px;
+	margin-right: 140px;
+	margin-bottom: 100px;
+}
+
+#branding{
+	position: relative;
+	left:150px;
+	right: 150px;
+	clear: both;
+}
+
+#navigation{
+	position: relative;
+	left: 150px;
+	right: 150px;
+	clear: both;
+}
+
+#navigation ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#navigation li{
+	float: left;
+}
+
+#navigation a{
+	display: block;
+    width: 100px;
+	text-decoration: none;
+	border-style: inset;
+	text-align: center;
+	padding: 15px;
+	padding-left: 50px;
+	padding-right: 50px;
+	font-size: 22px;
+}
+
+#tagline{
+	left: 15px;
+	position: relative;
+	top: 20px;
+	text-align: justify;
+	float: left;
+	margin-right: 53px;
+}
+
+#tagline p{
+	font-size: 20px;
+	left: 10px;
+	position: relative;
+	right: 300px;
+}
+
+#tagline img{
+	width: 300px;
+	height: 200px;
+	float: left;
+	position: relative;
+}
+
+.contact input, .order input{
+	float: right;
+	display: flex;
+	flex-direction: column;
+	padding-left: 10px;
+}
+
+.contact fieldset, .order fieldset{
+	position: relative;
+	line-height: 150%;
+	left: 270px;
+	top: 20px;
+}
+
+.contact label, .order label{
+	padding-right: 10px;
+}
+
+
+#slider figure{
+	width: 605px;
+	overflow: hidden;
+	height: 370px;
+	box-shadow: 0 0 8px #000;
+	position: relative;
+	margin: 50px auto;
+}
+
+#slider figure img{
+	position: relative;
+	display: none;
+	left: 0;
+}
+
+#map{
+	width: 400px;
+	height: 300px;
+	background-color: #CCC;
+	margin: 0 auto;
+}
+
+#footer{
+	padding: 10px;
+	text-align: center;
+	clear: both;
+}
+
+#shoestype td{
+	font-size: 22px;
+	padding-left: 50px;
+	position: relative;
+	text-align: center;
+}
+
+.gallery{
+	margin: 33px;
+	border: 1px solid gray;
+	float: left;
+	width: 140px;
+}
+
+.gallery img{
+	width: 140px;
+	height: 140px;
+}
+
+.description{
+	padding: 10px;
+	text-align: center;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>ShoeWorks</title>
+	
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$("#slider img:eq(0)").addClass("active").show();
+		})
+		setInterval(slide, 3000);
+		
+		function slide()
+		{
+			if($(".active").next().size())
+			{
+				$(".active").fadeOut().removeClass("active").next().fadeIn().addClass("active");
+			}
+			else
+			{
+				$(".active").fadeOut().removeClass("active");
+				$("#slider img:eq(0)").fadeIn().addClass("active");
+			}
+		}
+	</script>
+</head>
+
+
+<body>
+	<div id="header">
+		<div id="branding">
+			<img src="images/logo.png" ></img>
+		</div> <!-- end of branding -->
+	
+		<div id="navigation">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="products.html">Products</a></li>
+				<li><a href="order.html">Order</a></li>
+				<li><a href="contact.html">Contact Us</a></p></li>
+			</ul>
+		</div> <!-- end of navigation -->
+	</div> <!-- end of header -->
+	
+	<br><br><br>
+	<div id="slider">
+		<figure>
+			<img src="images/slider-fs9-1.jpg">
+			<img src="images/slider-fs4.jpg">
+			<img src="images/slider-fs11-1.jpg">
+			<img src="images/slider-ms16-2.jpg">
+			<img src="images/slider-ms17-1.jpg">
+		</figure>
+	</div> <!-- end of slider -->
+	
+	<div id="bodycontent">
+		
+	</div> <!-- end of body content -->
+
+	<div id="footer">
+		<p>ShoeWorks(R) copyright.</p>
+		<br><br>
+		
+	</div> <!-- end of footer -->
+</body>
+</html>

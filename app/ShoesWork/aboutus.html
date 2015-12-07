@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>About Us</title>
+	
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	
+	<!-- Map powered by Google Maps -->
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript">
+      function initialize() {
+		var uluru = {lat: 51.898750, lng: -8.472036};
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+          center: new google.maps.LatLng(44.5403, -78.5463),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 15,
+			center: uluru
+		});
+		var marker = new google.maps.Marker({
+			position: uluru,
+			map: map,
+			title: 'Uluru (Ayers Rock)'
+		});
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+	<!-- End of Script to Map-->
+    </script>
+</head>
+
+<body>
+	<div id="container">
+	<div id="header">
+		<div id="branding">
+			<img src="images/logo.png" ></img>
+		</div> <!-- end of branding -->
+	
+		<div id="navigation">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="products.html">Products</a></li>
+				<li><a href="order.html">Order</a></li>
+				<li><a href="contact.html">Contact Us</a></p></li>
+			</ul>
+		</div> <!-- end of navigation -->
+	</div> <!-- end of header -->
+	
+	<div id="bodycontent">
+		<div id="tagline">
+		<img src="images/store2.jpg">
+		<p>ShoeWorks is in the Irish marketplace since 2002 and since then selling high 
+		quality products to customers. We always regard to offer the best and exclusive 
+		products, because we want ShoeWorks's customers to be unique and fashion at the
+		same time.</p>
+		<p>In 2015, we are starting an online service in order to provide more possibilities,
+		easiness and comfort to our customers. Now it's possible to buy our products online
+		and receive and try them in home. Moreover, if the size doesn't fit or any other
+		issue with the product, the customer can change it up to ten days since the product
+		was received.</p>
+		<br><p style="text-align: center;"> We are situated on 25, St. Patricks Street, Cork - Co. Cork:
+			<div id="map">
+				<!--map with the location -->
+			</div> <!-- end of map --></p>
+		</div> <!-- end of tagline -->
+	</div> <!-- end of body content -->
+	
+	<div id="footer">
+	<br><br>
+		<p><br><br>ShoeWorks(R) copyright.</p>
+	</div> <!-- end of footer -->
+	</div>
+</body>
+</html>

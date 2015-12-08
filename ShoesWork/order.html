@@ -8,9 +8,10 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	
 	<script>
-		function getCookie()
+		basket = [];
+		
+		function getBasket()
 		{
-			var basket = [];
 			var strbasket = (localStorage.basket).split("},");
 			var temp;
 			for(var i=0; i<strbasket.length; i++)
@@ -28,10 +29,36 @@
 				console.log("bskt: "+basket);
 			}
 		}
+		
+		function showBasket()
+		{
+			var list;
+			var item = document.createElement('ol');
+			for(var i=0; i<basket.length; i++)
+			{
+				if(i == 0)  //If it's the first iteration
+				{
+					console.log("first: "+basket[i].id);
+					list = "<ol><li><option value=\""+basket[i].id+"\">"+basket[i].id+"</option></li>";
+				}
+				else if(i == basket.length - 1)  //If it's the last iteration
+				{
+					console.log("last: "+basket[i].id);
+					list+= "<li><option value=\""+basket[i].id+"\">"+basket[i].id+"</option></li></ol>";
+				}
+				else  //Any other iteration
+				{
+					console.log(basket[i].id);
+					list+= "<li><option value=\""+basket[i].id+"\">"+basket[i].id+"</option></li>";
+				}
+				//item.appendChild(list);
+			}
+			document.getElementById("basketlist").innerHTML = list;
+		}
 	</script>
 </head>
 
-<body onload="getCookie()">
+<body onload="getBasket(); showBasket()">
 	<div id="header">
 		<div id="branding">
 			<img src="images/logo.png" ></img>
@@ -43,7 +70,7 @@
 				<li><a href="aboutus.html">About Us</a></li>
 				<li><a href="products.html">Products</a></li>
 				<li><a href="order.html">Order</a></li>
-				<li><a href="contact.html">Contact Us</a></p></li>
+				<li><a href="contact.html">Contact Us</a></li>
 			</ul>
 		</div> <!-- end of navigation -->
 	</div> <!-- end of header -->
@@ -53,13 +80,12 @@
 	</div> <!-- end of tagline -->
 		
 	<div id="bodycontent">
+
 		<form action="http://www.htmlcodetutorial.com/cgi-bin/mycgi.pl" method="post" class="order" id="order" onsubmit="return validate()">
 			<fieldset>
+				<div id="basketlist">
+				</div>
 				<label for="product">Product:</label>
-				<select multiple>
-					<option value="fsneakers">Female Sneakers</option>
-					<option value="msneakers">Male Sneakers</option>
-				</select>
 				<br>
 				<label for="name">Name:</label>
 				<input type="text" name="name" id="name"><br>

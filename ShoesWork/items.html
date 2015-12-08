@@ -125,7 +125,17 @@
 						basket.push(products[i]);
 					}
 				}
+				
+				var strbasket = [];
+				for(var i=0; i<basket.length; i++)
+				{
+					strbasket.push(JSON.stringify(basket[i]));
+				}
+				localStorage.basket = strbasket;
+				console.log(localStorage.basket);
+				location.href = "order.html";
 			}
+			
 		</script>
 		<br><br><br><br>
 		<input onclick="javascript:buy()" type="button" id="buy" value="Buy">

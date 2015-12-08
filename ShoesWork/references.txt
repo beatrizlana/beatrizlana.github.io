@@ -7,3 +7,7 @@ https://codepen.io/dudleystorey/pen/ehKpi
 https://developers.google.com/maps/tutorials/fundamentals/adding-a-google-map
 
 http://matthewjamestaylor.com/blog/keeping-footers-at-the-bottom-of-the-page
+
+https://www.oficinadanet.com.br/artigo/28/redirecionamento_em_javascript
+
+https://forum.zwame.pt/threads/javascript-variaveis-de-pagina-para-pagina.699496/

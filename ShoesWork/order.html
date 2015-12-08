@@ -6,9 +6,32 @@
 	<title>Order</title>
 	
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	
+	<script>
+		function getCookie()
+		{
+			var basket = [];
+			var strbasket = (localStorage.basket).split("},");
+			var temp;
+			for(var i=0; i<strbasket.length; i++)
+			{
+				if(i == strbasket.length - 1)
+				{
+					temp = strbasket[i];
+				}
+				else
+				{
+					temp = strbasket[i]+"}";
+				}
+				console.log("temp: "+temp);
+				basket.push(JSON.parse(temp));
+				console.log("bskt: "+basket);
+			}
+		}
+	</script>
 </head>
 
-<body>
+<body onload="getCookie()">
 	<div id="header">
 		<div id="branding">
 			<img src="images/logo.png" ></img>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Contact</title>
+	
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	
+	<script>
+	function validateContact()
+	{
+		result = true;
+		contentName = contact.name.value;
+		contentEmail = contact.email.value;
+		contentPhone = contact.phone.value;
+		contentSubject = contact.subject.value;
+		contentMessage = contact.message.value;
+		
+		var alertMsg = "";
+		var validName = /^[A-Za-z]+[\s][A-Za-z\s\'-]+[A-Za-z]$/;
+		var validEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}$/;
+		var validPhone = /^[+][0-9]{5,15}/;
+		
+		if(contentName == "")
+		{
+			result = false;
+			document.getElementById('name').style.border = "solid firebrick 1px";
+			alertMsg += "Please fill out your full name\n";
+		}
+		else if(!(validName.test(contentName)))
+		{
+			result = false;
+			alertMsg += contentName+" is not a valid name.\n";
+		}
+		
+		if(contentEmail == "")
+		{
+			result = false;
+			document.getElementById('email').style.border = "solid firebrick 1px";
+			alertMsg += "Please fill out your email\n";
+		}
+		else if(!(validEmail.test(contentEmail)))
+		{
+			result = false;
+			alertMsg += contentEmail+" is not a valid email.\n";
+		}
+		
+		if(contentPhone == "")
+		{
+			result = false;
+			document.getElementById('phone').style.border = "solid firebrick 1px";
+			alertMsg += "Please fill out your phone number\n";
+		}
+		else if(!(validPhone.test(contentPhone)))
+		{
+			result = false;
+			alertMsg += contentPhone+" is not a valid phone number.\n";
+		}
+		
+		if(contentSubject == "")
+		{
+			result = false;
+			document.getElementById('subject').style.border = "solid firebrick 1px";
+			alertMsg += "Please fill out the message subject\n";
+		}
+		
+		if(contentMessage == "")
+		{
+			result = false;
+			document.getElementById('message').style.border = "solid firebrick 1px";
+			alertMsg += "Please write a message\n";
+		}
+		
+		
+		window.alert(alertMsg);
+		return result;
+	}
+	</script>
+	
+</head>
+
+<body>
+	<div id="header">
+		<div id="branding">
+			<img src="images/logo.png" ></img>
+		</div> <!-- end of branding -->
+
+		<div id="navigation">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="products.html">Products</a></li>
+				<li><a href="order.html">Order</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+		</div> <!-- end of navigation -->
+	</div> <!-- end of header -->
+	
+	<div id="tagline">
+			
+	</div> <!-- end of tagline -->
+	
+	<div id="bodycontent">
+		<form action="http://www.htmlcodetutorial.com/cgi-bin/mycgi.pl" method="post" class="contact" id="contact" onsubmit="return validateContact()">
+			<fieldset>
+				<label for="name">Name:</label>
+				<input type="text" name="name" id="name"><br>
+				<label for="email">Email:</label>
+				<input type="email" name="email" id="email"><br>
+				<label for="phone">Phone Number:</label>
+				<input type="text" name="phone" id="phone"><br>
+				<label for="subject">Subject:</label>
+				<input type="text" name="subject" id="subject"><br>
+			
+				<br> Message:<br>
+				<textarea name="message" id="message" cols="40" rows="10" placeholder="Enter message here..."></textarea>
+				<br><br><input type="submit" value="Submit">
+			</fieldset>
+		</form>
+	</div> <!-- end of body content -->
+	
+</body>
+</html>

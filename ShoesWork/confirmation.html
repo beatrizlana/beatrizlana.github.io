@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Order Confirmation</title>
+	
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	
+	<script>
+		function reservation()
+		{
+			var reservation = "";
+			reservation += "<p>Thank you! Your order was confirmed!</p>";
+			reservation += "<p>Your reservation number is: <pre>"+generateResNumber()+"</pre></p>";
+			reservation += "<p>You have 03 working days to get your products on our store.</p>";
+			document.getElementById('orderconfirm').innerHTML = reservation;
+		}
+		
+		function generateResNumber()
+		{
+			//document.getElementById('resnumber').innerHTML = Math.floor(Math.random() * 10000000);
+			return Math.floor(Math.random() * 10000000);
+		}
+	</script>
+</head>
+
+<body onload="reservation()">
+	<div id="header">
+		<div id="branding">
+			<img src="images/logo.png" ></img>
+		</div> <!-- end of branding -->
+	
+		<div id="navigation">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="products.html">Products</a></li>
+				<li><a href="order.html">Order</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+		</div> <!-- end of navigation -->
+	</div> <!-- end of header -->
+	
+	<div id="bodycontent">
+		<div id="orderconfirm">
+			<!-- <p>Thank you! Your order was confirmed!</p>
+			<p>Your reservation number is:
+			<pre><div id="resnumber"></div></pre></p>
+			<p>You have 03 working days to get your products on our store.</p>-->
+		</div>
+		
+	</div> <!-- end of body content -->
+
+	<div id="footer">
+		<p>ShoeWorks(R) copyright.</p>
+		<br><br>
+		
+	</div> <!-- end of footer -->
+</body>
+</html>

@@ -2,27 +2,22 @@ html, body{
 	background-color: #EDEAE1;
 	height: 100%;
 	margin: 1px;
+	width: auto;
 }
 
 #bodycontent{
-	float: left;
-	margin-left: 140px;
-	margin-right: 140px;
-	margin-bottom: 100px;
+	margin: auto;
+	width: 80%;
 }
 
 #branding{
-	position: relative;
-	left:150px;
-	right: 150px;
-	clear: both;
+	margin: auto;
+	width: 78%;
 }
 
 #navigation{
-	position: relative;
-	left: 150px;
-	right: 150px;
-	clear: both;
+	margin: auto;
+	width: 78%;
 }
 
 #navigation ul{
@@ -77,11 +72,17 @@ html, body{
 	padding-left: 10px;
 }
 
-.contact fieldset, .order fieldset{
+.contact fieldset{
+	width: 20%;
+	margin: 90px auto;
+	line-height: 150%;
+}
+.order fieldset{
 	position: relative;
 	line-height: 150%;
-	left: 270px;
-	top: 20px;
+	width: 29%;
+	line-height: 150%;
+	margin: 90px auto;
 }
 
 .contact label, .order label{
@@ -117,10 +118,16 @@ html, body{
 	clear: both;
 }
 
+#shoestype{
+	margin: 80px auto;
+	width:80%;
+	right: 50px;
+	position: relative;
+}
+
 #shoestype td{
 	font-size: 22px;
 	padding-left: 50px;
-	position: relative;
 	text-align: center;
 }
 
@@ -139,4 +146,21 @@ html, body{
 .description{
 	padding: 10px;
 	text-align: center;
+}
+
+#orderconfirm{
+	text-align: center;
+	font-size: 26px;
+	margin: 90px auto;
+}
+
+#orderconfirm pre{
+	font-size: 40px;
+}
+
+#buy{
+	font-size: 46px;
+	top: 155px;
+	float: right;
+	position: relative;
 }

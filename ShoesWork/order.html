@@ -87,7 +87,7 @@
 				alertMsg += contentEmail+" is not a valid email.\n";
 			}
 			
-			if(contentPhone == "")
+			if(contentPhone == "" || contentPhone == "+353")
 			{
 				result = false;
 				document.getElementById('phone').style.border = "solid firebrick 1px";
@@ -96,9 +96,11 @@
 			else if(!(validPhone.test(contentPhone)))
 			{
 				result = false;
-				alertMsg += contentPhone+" is not a valid phone number.\n";
+				alertMsg += contentPhone+" is not a valid phone number. (Format:+353778889999)\n";
 			}
-			window.alert(alertMsg);
+			
+			if(!result)
+				window.alert(alertMsg);
 			return result;
 		}
 	</script>
@@ -115,7 +117,7 @@
 				<li><a href="home.html">Home</a></li>
 				<li><a href="aboutus.html">About Us</a></li>
 				<li><a href="products.html">Products</a></li>
-				<li><a href="order.html">Order</a></li>
+				<li><a href="items.html">Order</a></li>
 				<li><a href="contact.html">Contact Us</a></li>
 			</ul>
 		</div> <!-- end of navigation -->
@@ -127,7 +129,7 @@
 		
 	<div id="bodycontent">
 
-		<form action="http://www.htmlcodetutorial.com/cgi-bin/mycgi.pl" method="post" class="order" id="order" onsubmit="return validateOrder()">
+		<form action="confirmation.html" method="post" class="order" id="order" onsubmit="return validateOrder()">
 			<fieldset>
 				<div id="basketlist"></div>
 				<label for="name">Full Name:</label>

@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	
 	<script>
+		//Build reservation description
 		function reservation()
 		{
 			var reservation = "";
@@ -17,9 +18,9 @@
 			document.getElementById('orderconfirm').innerHTML = reservation;
 		}
 		
+		//Generate reservation number
 		function generateResNumber()
 		{
-			//document.getElementById('resnumber').innerHTML = Math.floor(Math.random() * 10000000);
 			return Math.floor(Math.random() * 10000000);
 		}
 	</script>
@@ -33,11 +34,11 @@
 	
 		<div id="navigation">
 			<ul>
-				<li><a href="home.html">Home</a></li>
-				<li><a href="aboutus.html">About Us</a></li>
-				<li><a href="products.html">Products</a></li>
-				<li><a href="order.html">Order</a></li>
-				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="home.html"><img src="buttons/home.jpg" alt="Home"></a></li>
+				<li><a href="aboutus.html"><img src="buttons/aboutus.jpg" alt="About Us"></a></li>
+				<li><a href="products.html"><img src="buttons/products.jpg" alt="Products"></a></li>
+				<li><a href="items.html"><img src="buttons/order.jpg" alt="Order"></a></li>
+				<li><a href="contact.html"><img src="buttons/contact.jpg" alt="Contact Us"></a></li>
 			</ul>
 		</div> <!-- end of navigation -->
 	</div> <!-- end of header -->
@@ -49,13 +50,13 @@
 			<pre><div id="resnumber"></div></pre></p>
 			<p>You have 03 working days to get your products on our store.</p>-->
 		</div>
-		
 	</div> <!-- end of body content -->
 
 	<div id="footer">
-		<p>ShoeWorks(R) copyright.</p>
+		<p>ShoeWorks&#174; Ltd.</p>
+		<address>25 Saint Patrick Street, Cork - Ireland</address><br>
+		Contact: 087 4329877 / info@shoeworks.ie
 		<br><br>
-		
 	</div> <!-- end of footer -->
 </body>
 </html>

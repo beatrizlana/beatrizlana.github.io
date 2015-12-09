@@ -11,3 +11,9 @@ http://matthewjamestaylor.com/blog/keeping-footers-at-the-bottom-of-the-page
 https://www.oficinadanet.com.br/artigo/28/redirecionamento_em_javascript
 
 https://forum.zwame.pt/threads/javascript-variaveis-de-pagina-para-pagina.699496/
+
+http://www.devmedia.com.br/criando-slideshow-do-zero-com-jquery-sem-usar-plugins/28297
+
+http://www.htmlprogressivo.net/2014/05/Imagem-CSS-Borda-Margem-Espacamento-Legenda-caption-img-alinhamento-formatacao.html
+
+http://www.w3schools.com/json/json_eval.asp

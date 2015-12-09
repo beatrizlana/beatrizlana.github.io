@@ -6,17 +6,16 @@
 	<title>ShoeWorks</title>
 	
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
 	
+	
+	<!-- Generate slider -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function()
 		{
 			$("#slider img:eq(0)").addClass("active").show();
 		})
-		setInterval(slide, 3000);
+		setInterval(slide, 5000);
 		
 		function slide()
 		{
@@ -42,11 +41,11 @@
 	
 		<div id="navigation">
 			<ul>
-				<li><a href="home.html">Home</a></li>
-				<li><a href="aboutus.html">About Us</a></li>
-				<li><a href="products.html">Products</a></li>
-				<li><a href="items.html">Order</a></li>
-				<li><a href="contact.html">Contact Us</a></p></li>
+				<li><a href="home.html"><img src="buttons/home.jpg" alt="Home"></a></li>
+				<li><a href="aboutus.html"><img src="buttons/aboutus.jpg" alt="About Us"></a></li>
+				<li><a href="products.html"><img src="buttons/products.jpg" alt="Products"></a></li>
+				<li><a href="items.html"><img src="buttons/order.jpg" alt="Order"></a></li>
+				<li><a href="contact.html"><img src="buttons/contact.jpg" alt="Contact Us"></a></li>
 			</ul>
 		</div> <!-- end of navigation -->
 	</div> <!-- end of header -->
@@ -61,15 +60,12 @@
 			<img src="images/slider-ms17-1.jpg">
 		</figure>
 	</div> <!-- end of slider -->
-	
-	<div id="bodycontent">
-		
-	</div> <!-- end of body content -->
 
 	<div id="footer">
-		<p>ShoeWorks(R) copyright.</p>
+		<p>ShoeWorks&#174; Ltd.</p>
+		<address>25 Saint Patrick Street, Cork - Ireland</address><br>
+		Contact: 087 4329877 / info@shoeworks.ie
 		<br><br>
-		
 	</div> <!-- end of footer -->
 </body>
 </html>

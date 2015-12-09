@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Itens</title>
+		<title>Items</title>
 		<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
 	
@@ -12,158 +12,118 @@
 			</div> <!-- end of branding -->
 			<div id="navigation">
 				<ul>
-					<li><a href="home.html">Home</a></li>
-					<li><a href="aboutus.html">About Us</a></li>
-					<li><a href="products.html">Products</a></li>
-					<li><a href="items.html">Order</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
+					<li><a href="home.html"><img src="buttons/home.jpg" alt="Home"></a></li>
+					<li><a href="aboutus.html"><img src="buttons/aboutus.jpg" alt="About Us"></a></li>
+					<li><a href="products.html"><img src="buttons/products.jpg" alt="Products"></a></li>
+					<li><a href="items.html"><img src="buttons/order.jpg" alt="Order"></a></li>
+					<li><a href="contact.html"><img src="buttons/contact.jpg" alt="Contact Us"></a></li>
 				</ul>
 			</div> <!-- end of navigation -->
 		</div> <!-- end of header -->
 		
-		<div id="tagline">
-		</div> <!-- end of tagline -->
-		
 		<div id="bodycontent">
-		<p style="font-size:24px; text-align: center; margin-top: 80px;">Select all the products you want to order and click on "Buy"</p>
+			<p style="font-size:24px; text-align: center; margin-top: 80px;">Select all the products you want to order and click on "Buy"</p>
 		
-		<script type="text/javascript">
-		
-		var products = [
-   		    {'id': 'fs1', 'img': 'images/fs1.jpg', 'checked': false, 'price': '2'},
-   		    {'id': 'fs2', 'img': 'images/fs2.jpg', 'checked': false, 'price': '2'},
-   		    {'id': 'fs3', 'img': 'images/fs3.jpg', 'checked': false, 'price': '3'},
-   		    {'id': 'fs4', 'img': 'images/fs4.jpg', 'checked': false, 'price': '4'},
-   		    {'id': 'fs5-1', 'img': 'images/fs5-1.jpg', 'checked': false, 'price': '4'},
-   		    {'id': 'fs5-2', 'img': 'images/fs5-2.jpg', 'checked': false, 'price': '4'},
-   		    {'id': 'fs6', 'img': 'images/fs6.jpg', 'checked': false, 'price': '4'},
-   		    {'id': 'fs7', 'img': 'images/fs7.jpg', 'checked': false, 'price': '5'},
-   		    {'id': 'fs8', 'img': 'images/fs8.jpg', 'checked': false, 'price': '5'},
-   		    {'id': 'fs9', 'img': 'images/fs9.jpg', 'checked': false, 'price': '5'},
-   		    {'id': 'fs10', 'img': 'images/fs10.jpg', 'checked': false, 'price': '5'},
-   		    {'id': 'fs11', 'img': 'images/fs11.jpg', 'checked': false, 'price': '5'},
-   		    {'id': 'fs12-1', 'img': 'images/fs12-1.jpg', 'checked': false, 'price': '6'},
-   		    {'id': 'fs12-2', 'img': 'images/fs12-2.jpg', 'checked': false, 'price': '6'},
-   		    {'id': 'fs13-2', 'img': 'images/fs13-2.jpg', 'checked': false, 'price': '6'},
-   		    {'id': 'fs13-3', 'img': 'images/fs13-3.jpg', 'checked': false, 'price': '6'},
-   		    {'id': 'fs14-1', 'img': 'images/fs14-1.jpg', 'checked': false, 'price': '7'},
-   		    {'id': 'fs15', 'img': 'images/fs15.jpg', 'checked': false, 'price': '7'},
-   		    {'id': 'fs16', 'img': 'images/fs16.jpg', 'checked': false, 'price': '7'},
-   		    {'id': 'fs17', 'img': 'images/fs17.jpg', 'checked': false, 'price': '7'},
-   		    {'id': 'fs18', 'img': 'images/fs18.jpg', 'checked': false, 'price': '7'},
-   		    {'id': 'fs19', 'img': 'images/fs19.jpg', 'checked': false, 'price': '8'},
-   		    {'id': 'fs20-2', 'img': 'images/fs20-2.jpg', 'checked': false, 'price': '8'},
-   		    {'id': 'fs21', 'img': 'images/fs21.jpg', 'checked': false, 'price': '8'},
-   		    {'id': 'ms1-1', 'img': 'images/ms1-1.jpg', 'checked': false, 'price': '8'},
-   		    {'id': 'ms1-4', 'img': 'images/ms1-4.jpg', 'checked': false, 'price': '8'},
-   		    {'id': 'ms2-1', 'img': 'images/ms2-1.jpg', 'checked': false, 'price': '8'},
-   		    {'id': 'ms3-1', 'img': 'images/ms3-1.jpg', 'checked': false, 'price': '8'},
-   		    {'id': 'ms3-2', 'img': 'images/ms3-2.jpg', 'checked': false, 'price': '8'},
-   		    {'id': 'ms4-1', 'img': 'images/ms4-1.jpg', 'checked': false, 'price': '8'},
-   		    {'id': 'ms4-2', 'img': 'images/ms4-2.jpg', 'checked': false, 'price': '8'},
-   		    {'id': 'ms5', 'img': 'images/ms5.jpg', 'checked': false, 'price': '8'},
-   		    {'id': 'ms6', 'img': 'images/ms6.jpg', 'checked': false, 'price': '8'},
-   		    {'id': 'ms7', 'img': 'images/ms7.jpg', 'checked': false, 'price': '9'},
-   		    {'id': 'ms8', 'img': 'images/ms8.jpeg', 'checked': false, 'price': '9'},
-   		    {'id': 'ms9', 'img': 'images/ms9.jpg', 'checked': false, 'price': '9'},
-   		    {'id': 'ms10', 'img': 'images/ms10.jpg', 'checked': false, 'price': '9'},
-   		    {'id': 'ms11', 'img': 'images/ms11.jpg', 'checked': false, 'price': '9'},
-   		    {'id': 'ms12', 'img': 'images/ms12.jpg', 'checked': false, 'price': '9'},
-   		    {'id': 'ms13', 'img': 'images/ms13.jpg', 'checked': false, 'price': '9'},
-   		    {'id': 'ms14', 'img': 'images/ms14.jpg', 'checked': false, 'price': '9'},
-   		    {'id': 'ms15', 'img': 'images/ms15.jpg', 'checked': false, 'price': '9'},
-   		    {'id': 'ms16', 'img': 'images/ms16.jpg', 'checked': false, 'price': '9'},
-   		    {'id': 'ms17', 'img': 'images/ms17.jpg', 'checked': false, 'price': '9'}
-   		];
-		
-		var female = [
-			{'id': 'fs1', 'img': 'images/fs1.jpg', 'checked': false, 'price': '2'},
-   			{'id': 'fs2', 'img': 'images/fs2.jpg', 'checked': false, 'price': '2'},
-   			{'id': 'fs3', 'img': 'images/fs3.jpg', 'checked': false, 'price': '3'},
-   			{'id': 'fs4', 'img': 'images/fs4.jpg', 'checked': false, 'price': '4'},
-   			{'id': 'fs5-1', 'img': 'images/fs5-1.jpg', 'checked': false, 'price': '4'},
-   			{'id': 'fs5-2', 'img': 'images/fs5-2.jpg', 'checked': false, 'price': '4'},
-   			{'id': 'fs6', 'img': 'images/fs6.jpg', 'checked': false, 'price': '4'},
-   			{'id': 'fs7', 'img': 'images/fs7.jpg', 'checked': false, 'price': '5'},
-   			{'id': 'fs8', 'img': 'images/fs8.jpg', 'checked': false, 'price': '5'},
-   			{'id': 'fs9', 'img': 'images/fs9.jpg', 'checked': false, 'price': '5'},
-   			{'id': 'fs10', 'img': 'images/fs10.jpg', 'checked': false, 'price': '5'},
-   			{'id': 'fs11', 'img': 'images/fs11.jpg', 'checked': false, 'price': '5'},
-   			{'id': 'fs12-1', 'img': 'images/fs12-1.jpg', 'checked': false, 'price': '6'},
-   			{'id': 'fs12-2', 'img': 'images/fs12-2.jpg', 'checked': false, 'price': '6'},
-   			{'id': 'fs13-2', 'img': 'images/fs13-2.jpg', 'checked': false, 'price': '6'},
-   			{'id': 'fs13-3', 'img': 'images/fs13-3.jpg', 'checked': false, 'price': '6'},
-   			{'id': 'fs14-1', 'img': 'images/fs14-1.jpg', 'checked': false, 'price': '7'},
-   			{'id': 'fs15', 'img': 'images/fs15.jpg', 'checked': false, 'price': '7'},
-   			{'id': 'fs16', 'img': 'images/fs16.jpg', 'checked': false, 'price': '7'},
-   			{'id': 'fs17', 'img': 'images/fs17.jpg', 'checked': false, 'price': '7'},
-   			{'id': 'fs18', 'img': 'images/fs18.jpg', 'checked': false, 'price': '7'},
-   			{'id': 'fs19', 'img': 'images/fs19.jpg', 'checked': false, 'price': '8'},
-   			{'id': 'fs20-2', 'img': 'images/fs20-2.jpg', 'checked': false, 'price': '8'},
-   			{'id': 'fs21', 'img': 'images/fs21.jpg', 'checked': false, 'price': '8'}
-		];
-		
-		var male = [
-			{'id': 'ms1-1', 'img': 'images/ms1-1.jpg', 'checked': false, 'price': '8'},
-   			{'id': 'ms1-4', 'img': 'images/ms1-4.jpg', 'checked': false, 'price': '8'},
-   			{'id': 'ms2-1', 'img': 'images/ms2-1.jpg', 'checked': false, 'price': '8'},
-   			{'id': 'ms3-1', 'img': 'images/ms3-1.jpg', 'checked': false, 'price': '8'},
-   			{'id': 'ms3-2', 'img': 'images/ms3-2.jpg', 'checked': false, 'price': '8'},
-   			{'id': 'ms4-1', 'img': 'images/ms4-1.jpg', 'checked': false, 'price': '8'},
-   			{'id': 'ms4-2', 'img': 'images/ms4-2.jpg', 'checked': false, 'price': '8'},
-   			{'id': 'ms5', 'img': 'images/ms5.jpg', 'checked': false, 'price': '8'},
-   			{'id': 'ms6', 'img': 'images/ms6.jpg', 'checked': false, 'price': '8'},
-   			{'id': 'ms7', 'img': 'images/ms7.jpg', 'checked': false, 'price': '9'},
-   			{'id': 'ms8', 'img': 'images/ms8.jpeg', 'checked': false, 'price': '9'},
-   			{'id': 'ms9', 'img': 'images/ms9.jpg', 'checked': false, 'price': '9'},
-   			{'id': 'ms10', 'img': 'images/ms10.jpg', 'checked': false, 'price': '9'},
-   			{'id': 'ms11', 'img': 'images/ms11.jpg', 'checked': false, 'price': '9'},
-   			{'id': 'ms12', 'img': 'images/ms12.jpg', 'checked': false, 'price': '9'},
-   			{'id': 'ms13', 'img': 'images/ms13.jpg', 'checked': false, 'price': '9'},
-   			{'id': 'ms14', 'img': 'images/ms14.jpg', 'checked': false, 'price': '9'},
-   			{'id': 'ms15', 'img': 'images/ms15.jpg', 'checked': false, 'price': '9'},
-   			{'id': 'ms16', 'img': 'images/ms16.jpg', 'checked': false, 'price': '9'},
-   			{'id': 'ms17', 'img': 'images/ms17.jpg', 'checked': false, 'price': '9'}
-		];
-		
-		function handle(cb) {
-			for (var i = 0; i < products.length; i++) {
-				if (products[i].id == cb.id) {
-					products[i].checked = document.getElementById(cb.id).checked;
-					break;
+			<script type="text/javascript">
+			//Array that stores all the products sold by ShoeWorks
+			var products = [
+					{'id': 'fs1', 'img': 'images/fs1.jpg', 'checked': false, 'price': '79.90'},
+					{'id': 'fs2', 'img': 'images/fs2.jpg', 'checked': false, 'price': '72.00'},
+					{'id': 'fs3', 'img': 'images/fs3.jpg', 'checked': false, 'price': '65.90'},
+					{'id': 'fs4', 'img': 'images/fs4.jpg', 'checked': false, 'price': '65.90'},
+					{'id': 'fs5-1', 'img': 'images/fs5-1.jpg', 'checked': false, 'price': '95.90'},
+					{'id': 'fs5-2', 'img': 'images/fs5-2.jpg', 'checked': false, 'price': '95.90'},
+					{'id': 'fs6', 'img': 'images/fs6.jpg', 'checked': false, 'price': '112.90'},
+					{'id': 'fs7', 'img': 'images/fs7.jpg', 'checked': false, 'price': '72.90'},
+					{'id': 'fs8', 'img': 'images/fs8.jpg', 'checked': false, 'price': '75.90'},
+					{'id': 'fs9', 'img': 'images/fs9.jpg', 'checked': false, 'price': '79.90'},
+					{'id': 'fs10', 'img': 'images/fs10.jpg', 'checked': false, 'price': '72.90'},
+					{'id': 'fs11', 'img': 'images/fs11.jpg', 'checked': false, 'price': '79.90'},
+					{'id': 'fs12-1', 'img': 'images/fs12-1.jpg', 'checked': false, 'price': '79.90'},
+					{'id': 'fs12-2', 'img': 'images/fs12-2.jpg', 'checked': false, 'price': '79.90'},
+					{'id': 'fs13-2', 'img': 'images/fs13-2.jpg', 'checked': false, 'price': '129.99'},
+					{'id': 'fs13-3', 'img': 'images/fs13-3.jpg', 'checked': false, 'price': '129.99'},
+					{'id': 'fs14-1', 'img': 'images/fs14-1.jpg', 'checked': false, 'price': '85.90'},
+					{'id': 'fs15', 'img': 'images/fs15.jpg', 'checked': false, 'price': '82.90'},
+					{'id': 'fs16', 'img': 'images/fs16.jpg', 'checked': false, 'price': '82.90'},
+					{'id': 'fs17', 'img': 'images/fs17.jpg', 'checked': false, 'price': '95.00'},
+					{'id': 'fs18', 'img': 'images/fs18.jpg', 'checked': false, 'price': '85.90'},
+					{'id': 'fs19', 'img': 'images/fs19.jpg', 'checked': false, 'price': '79.90'},
+					{'id': 'fs20-2', 'img': 'images/fs20-2.jpg', 'checked': false, 'price': '72.00'},
+					{'id': 'fs21', 'img': 'images/fs21.jpg', 'checked': false, 'price': '69.90'},
+					{'id': 'ms1-1', 'img': 'images/ms1-1.jpg', 'checked': false, 'price': '119.90'},
+					{'id': 'ms1-4', 'img': 'images/ms1-4.jpg', 'checked': false, 'price': '119.90'},
+					{'id': 'ms2-1', 'img': 'images/ms2-1.jpg', 'checked': false, 'price': '119.90'},
+					{'id': 'ms3-1', 'img': 'images/ms3-1.jpg', 'checked': false, 'price': '119.90'},
+					{'id': 'ms3-2', 'img': 'images/ms3-2.jpg', 'checked': false, 'price': '119.90'},
+					{'id': 'ms4-1', 'img': 'images/ms4-1.jpg', 'checked': false, 'price': '89.90'},
+					{'id': 'ms4-2', 'img': 'images/ms4-2.jpg', 'checked': false, 'price': '89.90'},
+					{'id': 'ms5', 'img': 'images/ms5.jpg', 'checked': false, 'price': '79.90'},
+					{'id': 'ms6', 'img': 'images/ms6.jpg', 'checked': false, 'price': '72.90'},
+					{'id': 'ms7', 'img': 'images/ms7.jpg', 'checked': false, 'price': '85.90'},
+					{'id': 'ms8', 'img': 'images/ms8.jpeg', 'checked': false, 'price': '69.90'},
+					{'id': 'ms9', 'img': 'images/ms9.jpg', 'checked': false, 'price': '92.99'},
+					{'id': 'ms10', 'img': 'images/ms10.jpg', 'checked': false, 'price': '95.90'},
+					{'id': 'ms11', 'img': 'images/ms11.jpg', 'checked': false, 'price': '102.90'},
+					{'id': 'ms12', 'img': 'images/ms12.jpg', 'checked': false, 'price': '115.90'},
+					{'id': 'ms13', 'img': 'images/ms13.jpg', 'checked': false, 'price': '119.90'},
+					{'id': 'ms14', 'img': 'images/ms14.jpg', 'checked': false, 'price': '122.90'},
+					{'id': 'ms15', 'img': 'images/ms15.jpg', 'checked': false, 'price': '99.90'},
+					{'id': 'ms16', 'img': 'images/ms16.jpg', 'checked': false, 'price': '119.90'},
+				{'id': 'ms17', 'img': 'images/ms17.jpg', 'checked': false, 'price': '85.90'}
+			];
+			
+			//Set the "checked" field of products array for each product
+			function handle(cb)
+			{
+				for (var i = 0; i < products.length; i++)
+				{
+					if (products[i].id == cb.id)
+					{
+						products[i].checked = document.getElementById(cb.id).checked;
+						break;
+					}
 				}
 			}
-		};
-		
+			
+			//Builds the page with images, prices, and checkboxes
+			//to customer to choose which products they want to buy
 			var root = document.getElementById('bodycontent');
 			var fragment = document.createDocumentFragment();
 
-			for (var i = 0; i < products.length; i++) {
+			for (var i = 0; i < products.length; i++)
+			{
 				var item = document.createElement('div');
-// 				item.setAttribute('id', products[i].id);
 				item.setAttribute('class', 'gallery');
 
-				
 				var img = document.createElement('img');
 				img.setAttribute('src', products[i].img);
 				item.appendChild(img);
 				
 				var description = document.createElement('div');
 				description.setAttribute('class', 'description');
+				description.innerHTML = "&euro;"+products[i].price;
 				item.appendChild(description);
 				
 				var checkbox = document.createElement('input');
 				checkbox.setAttribute('id', products[i].id);
 				checkbox.setAttribute('type', 'checkbox');
 				checkbox.setAttribute('onclick', 'handle(this);');
-// 				checkbox.setAttribute('checked', products[i].checked);
+				checkbox.setAttribute('value', 'Add to basket');
 				item.appendChild(checkbox);
+				
+				var label = document.createElement('label')
+				label.htmlFor = products[i].id;
+				label.appendChild(document.createTextNode('Add to basket'));
+				item.appendChild(label);
 
 				fragment.appendChild(item);
 			}
 
 			root.appendChild(fragment);
 			
+			//Submits the products checked to a basket and stores
+			//it locally so it can be used by other pages
 			function buy()
 			{
 				var basket = [];
@@ -182,13 +142,19 @@
 					strbasket.push(JSON.stringify(basket[i]));
 				}
 				localStorage.basket = strbasket;
-				console.log(localStorage.basket);
-				location.href = "order.html";
+				location.href = "order.html";  //Redirects page to "order.html"
 			}
 			
 		</script>
 		<br><br><br><br>
 		<input onclick="javascript:buy()" type="button" id="buy" value="Buy">
 		</div>
+	
+	<div id="footer">
+		<br><br><p>ShoeWorks&#174; Ltd.</p>
+		<address>25 Saint Patrick Street, Cork - Ireland</address><br>
+		Contact: 087 4329877 / info@shoeworks.ie
+		<br><br>
+	</div> <!-- end of footer -->
 	</body>
 </html>

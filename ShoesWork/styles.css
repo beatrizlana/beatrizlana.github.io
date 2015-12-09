@@ -3,6 +3,8 @@ html, body{
 	height: 100%;
 	margin: 1px;
 	width: auto;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 16px;
 }
 
 #bodycontent{
@@ -30,9 +32,19 @@ html, body{
 	float: left;
 }
 
+#navigation li img{
+	width: 200px;
+	margin: auto;
+	position: relative;
+	margin: 0;
+	right: 50px;
+	bottom: 15px;
+}
+
 #navigation a{
 	display: block;
     width: 100px;
+	height: 27px;
 	text-decoration: none;
 	border-style: inset;
 	text-align: center;
@@ -72,15 +84,21 @@ html, body{
 	padding-left: 10px;
 }
 
+.order select{
+	float: center;
+	padding-left: 20px;
+	margin-left: 62px;
+}
+
 .contact fieldset{
-	width: 20%;
+	width: 30%;
 	margin: 90px auto;
 	line-height: 150%;
 }
 .order fieldset{
 	position: relative;
 	line-height: 150%;
-	width: 29%;
+	width: 33%;
 	line-height: 150%;
 	margin: 90px auto;
 }
@@ -116,6 +134,8 @@ html, body{
 	padding: 10px;
 	text-align: center;
 	clear: both;
+	font-size: 12px;
+	background-color: #D7D0B9
 }
 
 #shoestype{

@@ -8,40 +8,62 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	
 	<script>
-	
-		function buy()
-		{
-			var items = document.male.getElementByName("prod");
-			var basket = [];
+		//Array that stores female products
+		var male = [
+			{'id': 'ms1-1', 'img': 'images/ms1-1.jpg', 'checked': false, 'price': '119.90'},
+   		    {'id': 'ms1-4', 'img': 'images/ms1-4.jpg', 'checked': false, 'price': '119.90'},
+   		    {'id': 'ms2-1', 'img': 'images/ms2-1.jpg', 'checked': false, 'price': '119.90'},
+   		    {'id': 'ms3-1', 'img': 'images/ms3-1.jpg', 'checked': false, 'price': '119.90'},
+   		    {'id': 'ms3-2', 'img': 'images/ms3-2.jpg', 'checked': false, 'price': '119.90'},
+   		    {'id': 'ms4-1', 'img': 'images/ms4-1.jpg', 'checked': false, 'price': '89.90'},
+   		    {'id': 'ms4-2', 'img': 'images/ms4-2.jpg', 'checked': false, 'price': '89.90'},
+   		    {'id': 'ms5', 'img': 'images/ms5.jpg', 'checked': false, 'price': '79.90'},
+   		    {'id': 'ms6', 'img': 'images/ms6.jpg', 'checked': false, 'price': '72.90'},
+   		    {'id': 'ms7', 'img': 'images/ms7.jpg', 'checked': false, 'price': '85.90'},
+   		    {'id': 'ms8', 'img': 'images/ms8.jpeg', 'checked': false, 'price': '69.90'},
+   		    {'id': 'ms9', 'img': 'images/ms9.jpg', 'checked': false, 'price': '92.99'},
+   		    {'id': 'ms10', 'img': 'images/ms10.jpg', 'checked': false, 'price': '95.90'},
+   		    {'id': 'ms11', 'img': 'images/ms11.jpg', 'checked': false, 'price': '102.90'},
+   		    {'id': 'ms12', 'img': 'images/ms12.jpg', 'checked': false, 'price': '115.90'},
+   		    {'id': 'ms13', 'img': 'images/ms13.jpg', 'checked': false, 'price': '119.90'},
+   		    {'id': 'ms14', 'img': 'images/ms14.jpg', 'checked': false, 'price': '122.90'},
+   		    {'id': 'ms15', 'img': 'images/ms15.jpg', 'checked': false, 'price': '99.90'},
+   		    {'id': 'ms16', 'img': 'images/ms16.jpg', 'checked': false, 'price': '119.90'},
+   		    {'id': 'ms17', 'img': 'images/ms17.jpg', 'checked': false, 'price': '85.90'}
+		];
 		
-			for(var i=0; i<items.length; i++)
-			{
-				if(items[i].checked == true)
-				{
-					basket.push(items[i]);
-					document.write(items[i]);
-				}
-			}
+		//Builds the page with images and ids of male products
+		//and make the images clickable and expandable
+		function buildPage()
+		{
+			var root = document.getElementById('bodycontent');
+			var fragment = document.createDocumentFragment();
 
-			console.log(basket.toString());
-		
-			for(var i=0; i<basket.length; i++)
+			for (var i=0; i<male.length; i++)
 			{
-				levarcod(basket[i], "sfs");
+				var item = document.createElement('div');
+				item.setAttribute('class', 'gallery');
+					
+				var a = document.createElement('a');
+				a.setAttribute('href', male[i].img);
+				item.appendChild(a);
+				var img = document.createElement('img');
+				img.setAttribute('src', male[i].img);
+				a.appendChild(img);
+				
+				var description = document.createElement('div');
+				description.setAttribute('class', 'description');
+				description.innerHTML = male[i].id;
+				item.appendChild(description);
+
+				fragment.appendChild(item);
 			}
-		
-		}
-		
-		function levarcod(cod, descr)
-		{
-			top.opener.document.getElementById("campo1").value = cod;
-			top.opener.document.getElementById("descrp").innerHTML = descr;
-			window.close();
+			root.appendChild(fragment);
 		}
 	</script>
 </head>
 
-<body>
+<body onload="buildPage()">
 	<div id="header">
 		<div id="branding">
 			<img src="images/logo.png" ></img>
@@ -49,99 +71,23 @@
 	
 		<div id="navigation">
 			<ul>
-				<li><a href="home.html">Home</a></li>
-				<li><a href="aboutus.html">About Us</a></li>
-				<li><a href="products.html">Products</a></li>
-				<li><a href="items.html">Order</a></li>
-				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="home.html"><img src="buttons/home.jpg" alt="Home"></a></li>
+				<li><a href="aboutus.html"><img src="buttons/aboutus.jpg" alt="About Us"></a></li>
+				<li><a href="products.html"><img src="buttons/products.jpg" alt="Products"></a></li>
+				<li><a href="items.html"><img src="buttons/order.jpg" alt="Order"></a></li>
+				<li><a href="contact.html"><img src="buttons/contact.jpg" alt="Contact Us"></a></li>
 			</ul>
 		</div> <!-- end of navigation -->
 	</div> <!-- end of header -->
 	
-	<div id="tagline">
-			
-	</div> <!-- end of tagline -->
-	
 	<div id="bodycontent">
-		<form id="male" class="male" onsubmit="return buy()">
-		<div class="gallery">
-			<a href="javascript:buy();"><img src="images/ms1-1.jpg"></a>
-			<div class="description">&euro;49.90</div>
-			<input type="checkbox" name="prod" value="ms1-1"> Add to basket
-		</div>
-		<div class="gallery">
-			<img src="images/ms2-1.jpg">
-			<div class="description">&euro;49.90</div>
-			<input type="checkbox" name="prod" value="ms2-1"> Add to basket
-		</div>
-		<div class="gallery">
-			<img src="images/ms3-1.jpg">
-			<div class="description">&euro;49.90</div>
-			<input type="checkbox" name="prod" value="ms3-1"> Add to basket
-		</div>
-		<div class="gallery">
-			<img src="images/ms4-1.jpg">
-			<div class="description">&euro;49.90</div>
-			<input type="checkbox" name="prod" value="ms4-1"> Add to basket
-		</div>
-		<div class="gallery">
-			<img src="images/ms5.jpg">
-			<div class="description">&euro;49.90</div>
-			<input type="checkbox" name="prod" value="ms5"> Add to basket
-		</div>
-		<div class="gallery">
-			<img src="images/ms6.jpg">
-			<div class="description"></div>
-		</div>
-		<div class="gallery">
-			<img src="images/ms7.jpg">
-			<div class="description"></div>
-		</div>
-		<div class="gallery">
-			<img src="images/ms8.jpeg">
-			<div class="description"></div>
-		</div>
-		<div class="gallery">
-			<img src="images/ms9.jpg">
-			<div class="description"></div>
-		</div>
-		<div class="gallery">
-			<img src="images/ms10.jpg">
-			<div class="description"></div>
-		</div>
-		<div class="gallery">
-			<img src="images/ms11.jpg">
-			<div class="description"></div>
-		</div>
-		<div class="gallery">
-			<img src="images/ms12.jpg">
-			<div class="description"></div>
-		</div>
-		<div class="gallery">
-			<img src="images/ms13.jpg">
-			<div class="description"></div>
-		</div>
-		<div class="gallery">
-			<img src="images/ms14.jpg">
-			<div class="description"></div>
-		</div>
-		<div class="gallery">
-			<img src="images/ms15.jpg">
-			<div class="description"></div>
-		</div>
-		<div class="gallery">
-			<img src="images/ms16.jpg">
-			<div class="description"></div>
-		</div>
-		<div class="gallery">
-			<img src="images/ms17.jpg">
-			<div class="description"></div>
-		</div>
-		
-		<input type="submit" value="Submit">
-		</form>
-		
 	</div> <!-- end of body content -->
 	
+	<div id="footer">
+		<p>ShoeWorks&#174; Ltd.</p>
+		<address>25 Saint Patrick Street, Cork - Ireland</address><br>
+		Contact: 087 4329877 / info@shoeworks.ie
+		<br><br>
+	</div> <!-- end of footer -->
 </body>
 </html>

@@ -3,13 +3,14 @@
 <html>
 
 <head>
-	<title>Order</title>
+	<title>My Order</title>
 	
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	
 	<script>
-		basket = [];
+		basket = []; //Global variable with the products in the basket
 		
+		//Get basket array from "items.html" page
 		function getBasket()
 		{
 			var strbasket = (localStorage.basket).split("},");
@@ -24,33 +25,33 @@
 				{
 					temp = strbasket[i]+"}";
 				}
-				console.log("temp: "+temp);
 				basket.push(JSON.parse(temp));
-				console.log("bskt: "+basket);
 			}
 		}
 		
+		//List the selected products inside the order form
 		function showBasket()
 		{
 			var list = "Selected products:";
 			for(var i=0; i<basket.length; i++)
 			{
-				if(i == 0)
+				if(i == 0) //If it's the first item, it creates the ordered list
 				{
-					list += "<ol><li>Code: "+basket[i].id+" &nbsp;&nbsp;Price: "+basket[i].price+"</li>";
+					list += "<ol><li>Code: "+basket[i].id+" &nbsp;&nbsp;Price: &euro;"+basket[i].price+"</li>";
 				}
-				else if(i == basket.length - 1)
+				else if(i == basket.length - 1) //If it's the last item, it closes the ordered list tag
 				{
-					list += "<li>Code: "+basket[i].id+" &nbsp;&nbsp;Price: "+basket[i].price+"</li></ol>";
+					list += "<li>Code: "+basket[i].id+" &nbsp;&nbsp;Price: &euro;"+basket[i].price+"</li></ol>";
 				}
-				else
+				else  //If any other item, it's added to the list
 				{
-					list += "<li>Code: "+basket[i].id+" &nbsp;&nbsp;Price: "+basket[i].price+"</li>";
+					list += "<li>Code: "+basket[i].id+" &nbsp;&nbsp;Price: &euro;"+basket[i].price+"</li>";
 				}
 			}
 			document.getElementById("basketlist").innerHTML = list;
 		}
 		
+		//Validate if the fields in the form were filled correctly
 		function validateOrder()
 		{
 			result = true;
@@ -114,24 +115,31 @@
 
 		<div id="navigation">
 			<ul>
-				<li><a href="home.html">Home</a></li>
-				<li><a href="aboutus.html">About Us</a></li>
-				<li><a href="products.html">Products</a></li>
-				<li><a href="items.html">Order</a></li>
-				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="home.html"><img src="buttons/home.jpg" alt="Home"></a></li>
+				<li><a href="aboutus.html"><img src="buttons/aboutus.jpg" alt="About Us"></a></li>
+				<li><a href="products.html"><img src="buttons/products.jpg" alt="Products"></a></li>
+				<li><a href="items.html"><img src="buttons/order.jpg" alt="Order"></a></li>
+				<li><a href="contact.html"><img src="buttons/contact.jpg" alt="Contact Us"></a></li>
 			</ul>
 		</div> <!-- end of navigation -->
 	</div> <!-- end of header -->
-	
-	<div id="tagline">
-			
-	</div> <!-- end of tagline -->
 		
 	<div id="bodycontent">
-
 		<form action="confirmation.html" method="post" class="order" id="order" onsubmit="return validateOrder()">
 			<fieldset>
 				<div id="basketlist"></div>
+				<label for="size">Shoes Size:</label>
+				<select>
+					<option id=5>5</option>
+					<option id=6>6</option>
+					<option id=7>7</option>
+					<option id=8>8</option>
+					<option id=9>9</option>
+					<option id=10>10</option>
+					<option id=11>11</option>
+					<option id=12>12</option>
+					<option id=13>13</option>
+				</select><br>
 				<label for="name">Full Name:</label>
 				<input type="text" name="name" id="name"><br>
 				<label for="email">Email:</label>
@@ -143,5 +151,11 @@
 		</form>
 	</div> <!-- end of body content -->
 	
+	<div id="footer">
+		<p>ShoeWorks&#174; Ltd.</p>
+		<address>25 Saint Patrick Street, Cork - Ireland</address><br>
+		Contact: 087 4329877 / info@shoeworks.ie
+		<br><br>
+	</div> <!-- end of footer -->
 </body>
 </html>
